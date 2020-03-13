@@ -43,6 +43,17 @@ namespace DoughTasty.Models
 
     public static bool Delete(int id)
     {
+      for(int i = 0; i < _allVendors.Count; i++)
+      {
+        if(_allVendors[i].GetType() == typeof(Vendor))
+        {
+          if(_allVendors[i].Id == id)
+          {
+            _allVendors.RemoveAt(i);
+            return true;
+          }
+        }
+      }
       return false;
     }
   }
