@@ -8,6 +8,10 @@ h1 {
   margin: 2rem;
 }
 
+h2 {
+  text-align: center;
+}
+
 hr {
   margin: 2rem;
 }
@@ -30,4 +34,17 @@ hr {
 #homeLink p {
   font-weight: bold;
   font-size: 2rem;
+}
+
+form {
+  text-align: left;
+  width: 50%;
+  margin: 2rem auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+form label {
+  font-weight: bold;
 }
