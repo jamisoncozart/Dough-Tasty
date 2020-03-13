@@ -1,0 +1,32 @@
+@using DoughTasty.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <div class="card vendorCard">
+    <div class="card-header">
+      <h2>@Model.Title</h2>
+    </div>
+    <div class="card-body">
+      <p>Description: @Model.Description</p>
+      <div class="row">
+        @foreach (Order order in Model.Orders)
+        {
+          
+        }
+        <div class="col-md-6">
+          <a href="/vendors/@Model.Id">
+            <button class="btn btn-info btn-block" type="submit">Add Order</button>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <form action="/vendors/@Model.Id/delete" method="post">
+            <button class="btn btn-danger btn-block" type="submit" name="button">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

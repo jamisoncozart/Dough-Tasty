@@ -7,7 +7,7 @@ namespace DoughTasty.Models
   {
     public string Title {get; set;}
     public string Description {get; set;}
-    public List<Order> Orders {get; set;}
+    private List<Order> _allOrders = new List<Order>();
     public int Id {get; set;}
     private static int _currentId = 0;
     private static List<Vendor> _allVendors = new List<Vendor>();
@@ -60,6 +60,17 @@ namespace DoughTasty.Models
         }
       }
       return false;
+    }
+
+    //Orders
+    public void AddOrder(Order order)
+    {
+      _allOrders.Add(order);
+    }
+
+    public List<Order> AllOrders()
+    {
+      return _allOrders;
     }
   }
 }
