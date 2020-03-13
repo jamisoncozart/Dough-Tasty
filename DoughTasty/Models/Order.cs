@@ -15,6 +15,7 @@ namespace DoughTasty.Models
       NumberOfBread = numBread;
       NumberOfPastry = numPastry;
       Date = date;
+      Price = (numBread + numPastry) * 2;
       Vendor.Find(vendorId).AddOrder(this);
     }
   }
