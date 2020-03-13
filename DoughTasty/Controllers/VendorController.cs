@@ -13,6 +13,13 @@ namespace DoughTasty.Controllers
       return View(allVendors);
     }
 
+    [HttpPost("/vendors")]
+    public ActionResult Create(string title, string description)
+    {
+      Vendor newVendor = new Vendor(title, description);
+      return RedirectToAction("Index");
+    }
+
     [HttpGet("/vendors/new")]
     public ActionResult New() { return View(); }
   }

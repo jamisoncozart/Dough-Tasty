@@ -9,30 +9,34 @@
   {
     <h1>There doesn't seem to be any vendors yet!</h1>
   }
-  @foreach (Vendor vendor in Model)
-  {
-    <div class="card">
-      <div class="card-header">
-        <h1>@vendor.Title</h1>
-      </div>
-      <div class="card-body">
-        <p>Description: @vendor.Description</p>
-        <div class="row">
-          <div class="col-md-6">
-            <form action="/vendors/@vendor.Id" method="get">
-              <button class="btn btn-info btn-lg btn-block" type="submit">More</button>
-            </form>
+  <div class="row">
+    @foreach (Vendor vendor in Model)
+    {
+      <div class="col-md-6">
+        <div class="card vendorCard">
+          <div class="card-header">
+            <h2>@vendor.Title</h2>
           </div>
-          <div class="col-md-6">
-            <form action="/vendors/@vendor.Id/delete" method="post">
-              <button class="btn btn-danger btn-lg btn-block" type="submit" name="button">Delete</button>
-            </form>
+          <div class="card-body">
+            <p>Description: @vendor.Description</p>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="/vendors/@vendor.Id">
+                  <button class="btn btn-info btn-block" type="submit">More</button>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <form action="/vendors/@vendor.Id/delete" method="post">
+                  <button class="btn btn-danger btn-block" type="submit" name="button">Delete</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  }
+    }
+  </div>
   <a href="/vendors/new">
-    <button class="btn btn-success btn-lg btn-block" type="submit" name="button">+ Add Vendor</button>
+    <button id="addVendorBtn" class="btn btn-success btn-lg btn-block" type="submit" name="button">+ Add Vendor</button>
   </a>
 </div>

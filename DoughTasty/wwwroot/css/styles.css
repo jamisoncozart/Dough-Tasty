@@ -4,8 +4,12 @@ body {
   text-align: center;
 }
 
+div.container {
+  margin-top: 1rem;
+}
+
 h1 {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 h2 {
@@ -13,7 +17,7 @@ h2 {
 }
 
 hr {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 #homeLink, #homeLink:hover, #homeLink:active {
@@ -23,6 +27,12 @@ hr {
 
 .card {
   width: 30rem;
+  margin: 1rem 0;
+}
+
+.vendorCard {
+  width: 95%;
+  margin: 1rem auto;
 }
 
 .cardRow {
@@ -31,15 +41,19 @@ hr {
   justify-content: space-around;
 }
 
+#addVendorBtn {
+  margin-top: 1rem;
+}
+
 #homeLink p {
   font-weight: bold;
   font-size: 2rem;
 }
 
-form {
+form.createForm {
   text-align: left;
   width: 50%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border: 1px solid black;
   border-radius: 5px;
   padding: 2rem;
