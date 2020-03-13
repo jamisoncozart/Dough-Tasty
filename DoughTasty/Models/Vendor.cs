@@ -28,6 +28,16 @@ namespace DoughTasty.Models
 
     public static Vendor Find(int id)
     {
+      for(int i = 0; i < _allVendors.Count; i++)
+      {
+        if(_allVendors[i].GetType() == typeof(Vendor))
+        {
+          if(_allVendors[i].Id == id)
+          {
+            return _allVendors[i];
+          }
+        }
+      }
       return null;
     }
   }
