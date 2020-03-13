@@ -54,7 +54,7 @@ namespace DoughTasty.Tests
     {
       Vendor epicodus1 = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students");
       Order newOrder = new Order("Cater", 30, 30, "3/13/2020", epicodus1.Id);
-      Assert.AreEqual(newOrder, epicodus1.AllOrders()[0]);
+      Assert.AreEqual(newOrder, epicodus1.GetAllOrders()[0]);
     }
   }
 }
