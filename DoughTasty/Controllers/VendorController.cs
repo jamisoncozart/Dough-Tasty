@@ -7,6 +7,10 @@ namespace DoughTasty.Controllers
   public class VendorController : Controller
   {
     [HttpGet("/vendors")]
-    public ActionResult Index() { return View(); }
+    public ActionResult Index() 
+    {
+      List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
+    }
   }
 }

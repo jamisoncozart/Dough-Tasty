@@ -20,6 +20,11 @@ namespace DoughTasty.Models
       _allVendors.Add(this);
     }
 
+    public static List<Vendor> GetAll()
+    {
+      return _allVendors;
+    }
+
     public static void ClearAll()
     {
       _allVendors.Clear();

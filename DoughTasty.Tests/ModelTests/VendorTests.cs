@@ -45,6 +45,7 @@ namespace DoughTasty.Tests
     {
       Vendor epicodus1 = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students");
       bool isDeleted = Vendor.Delete(1);
+      Assert.AreEqual(true, isDeleted);
       Assert.AreEqual(null, Vendor.Find(1));
     }
   }
