@@ -1,3 +1,41 @@
+# Dough Tasty Bakery
+
+ASP.NET application for a bakery business to manage their vendors they sell to. Managing individual orders per vendor with prices and dates associated with orders. Practice with ASP.NET RESTful routing and CRUD functionality.
+
+## Getting Started
+
+Download the .zip file and extract all files into directory of your choice OR clone the repository to a directory. Open project directory in preferred text editor.
+
+### Prerequisites
+
+1. [.NET Framework](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.106-macos-x64-installer) 
+2. Text Editor (Visual Studio Code)
+
+### Installing
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/jamisoncozart/Dough-Tasty
+    ```
+2. Change directories into the project working directory:
+    ```
+    cd Dough-Tasty/DoughTasty
+    ```
+3. Restore all dependencies:
+    ```
+    dotnet restore
+    ```
+4. Compile and Run code:
+    ```
+    dotnet run
+    ```
+5. Open the locally hosted server in your preferred web browser:
+    ```
+    start http://localhost:5000
+    ```
+
+## Behavior Driven Development Specifications
+
 ### Back-End BDD
 |Behavior|Input|Output|
 |:-:|:-:|:-:|
@@ -37,3 +75,21 @@
 |**New Order Form**|||
 |Visitting "/vendors/:id/Order/new" route will display a form to add a new order with input fields for title, description, price, date, with a submit button.|*visits '/vendors/:id/order/new' route*|*show Order/New.cshtml*|
 |User clicks submit button, send form data through post request and redirect to "/vendors/:id" route|*user clicks submit*|*redirect to Vendor/Show.cshtml*|
+
+## Technologies Used
+
+* C#
+* ASP.NET core MVC
+* CRUD Functionality
+* RESTful Routing
+* Git
+
+## Author
+
+* **Jamison Cozart** - (https://github.com/jamisoncozart)
+
+## License
+
+Licensed under the MIT license.
+
+&copy; 2020 - Jamison Cozart
