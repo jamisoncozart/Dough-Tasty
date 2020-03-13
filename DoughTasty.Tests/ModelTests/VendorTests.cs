@@ -15,9 +15,9 @@ namespace DoughTasty.Tests
     [TestMethod]
     public void Vendor_CreateNewInstanceOfVendorWithCorrectProperties_Vendor()
     {
-      Vendor epicodus = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students");
-      Assert.AreEqual("Epicodus", epicodus.Title);
-      Assert.AreEqual("Coding Bootcamp interested in giving free bread to students", epicodus.Description);
+      Vendor epicodus1 = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students");
+      Assert.AreEqual("Epicodus", epicodus1.Title);
+      Assert.AreEqual("Coding Bootcamp interested in giving free bread to students", epicodus1.Description);
     }
 
     [TestMethod]
@@ -30,6 +30,14 @@ namespace DoughTasty.Tests
       Assert.AreEqual(1, epicodus1.Id);
       Assert.AreEqual(2, epicodus2.Id);
       Assert.AreEqual(3, epicodus3.Id);
+    }
+
+    [TestMethod]
+    public void Find_FindIndividualVendorByGivenId_Vendor()
+    {
+      Vendor epicodus1 = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students");
+      Vendor searchedVendor = Vendor.Find(1);
+      Assert.AreEqual(epicodus1, searchedVendor);
     }
   }
 }

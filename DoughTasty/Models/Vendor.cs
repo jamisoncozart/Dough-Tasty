@@ -25,5 +25,10 @@ namespace DoughTasty.Models
       _allVendors.Clear();
       _currentId = 0;
     }
+
+    public static Vendor Find(int id)
+    {
+      return null;
+    }
   }
 }
