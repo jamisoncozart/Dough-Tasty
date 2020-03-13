@@ -62,3 +62,25 @@ form.createForm {
 form label {
   font-weight: bold;
 }
+
+.orderDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.orderDiv .purchaseRow {
+  display: flex;
+  justify-content: right;
+  height: auto;
+}
+
+.orderDiv .purchaseRow .purchase, .purchase p {
+  margin: 0 0 0 1rem;
+  height: auto;
+}
+

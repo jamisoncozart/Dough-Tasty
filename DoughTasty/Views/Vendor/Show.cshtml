@@ -14,20 +14,27 @@
       {
         <h3>There are currently no orders for this vendor.</h3>
       }
+      @foreach (Order order in Model.GetAllOrders())
+      {
+        <div class="orderDiv">
+          <p>@order.Title - @order.Date</p>
+          <div class="purchaseRow">
+            <div class="purchase"><p>Bread: @order.NumberOfBread</p></div>
+            <div class="purchase"><p>Pastry: @order.NumberOfPastry</p></div>
+            <div class="purchase"><p>Cost: $@order.Price</p></div>
+          </div>
+        </div>
+      }
       <div class="row">
-        @foreach (Order order in Model.GetAllOrders())
-        {
-          <p>Order!</p>
-        }
         <div class="col-md-6">
           <a href="/vendors/@Model.Id/orders/new">
             <button class="btn btn-info btn-block" type="submit">Add Order</button>
           </a>
         </div>
         <div class="col-md-6">
-          <form action="/vendors/@Model.Id/delete" method="post">
-            <button class="btn btn-danger btn-block" type="submit" name="button">Delete</button>
-          </form>
+          <a href="/vendors">
+            <button class="btn btn-danger btn-block">Back</button>
+          </a>
         </div>
       </div>
     </div>
