@@ -2,7 +2,21 @@
 |Behavior|Input|Output|
 |:-:|:-:|:-:|
 |**Vendors**|||
-||||
+|Create new Vendor object with name, description, and orderList|`Vendor epicodus = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students")`|`epicodus.Name => "Epicodus; epicodus.Description => "Coding Bootcamp interested in giving free bread to students"`|
+|Upon using Vendor constructor, add Vendor to static list of vendors stored in Vendor class|`Vendor epicodus = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students")`|*add Vendor to _allVendors*|
+|Each new instance of Vendor recieves a unique ID based on the static CurrentId property which increments every instantiation.|`Vendor epicodus = new Vendor("Epicodus", "Coding Bootcamp interested in giving free bread to students")`|`epicodus.Id => 1`|
+|Vendor.GetAll() returns full list of all instantiated vendors|`Vendor.GetAll()`|`List<Vendor> { epicodus, square, google }`|
+|Vendor.Find(id) returns specific vendor object based on id passed into method|`Vendor.Find(1)`|`epicodus`|
+|Vendor.Delete(id) deletes specific vendor object based on id passed into method|`Vendor.Find(1)`|`_allVendors.RemoveAt(1)`|
+|**Orders**|||
+|Create new Order object with Title, description, and date|`Order cater = new Order("Cater", "30 Breads, 30 Pastries", "3/13/2020")`|`cater.Title => "cater; cater.Description => "Catering to students"`|
+|Calculate price of Order based on number of bread and pastries (everything is $2)|`Order cater = new Order("Cater", "30 Breads, 30 Pastries", "3/13/2020")`|`cater.Price => 120`|
+|Upon using Order constructor, add Order to static list of Orders stored in Order class|`Order cater = new Order("Cater", "Catering to students")`|*add Order to _allOrders*|
+|Each new instance of Order recieves a unique ID based on the static CurrentId property which increments every instantiation.|`Order cater = new Order("Cater", "Catering to students")`|`Cater.Id => 1`|
+|Order.GetAll() returns full list of all instantiated Orders|`Order.GetAll()`|`List<Order> { cater, square, google }`|
+|Order.Find(id) returns specific Order object based on id passed into method|`Order.Find(1)`|`cater`|
+|Order.Delete(id) deletes specific Order object based on id passed into method|`Order.Find(1)`|`_allOrders.RemoveAt(1)`|
+
 
 ### Front-End BDD
 |Behavior|Input|Output|
