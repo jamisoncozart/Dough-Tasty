@@ -23,7 +23,7 @@ namespace DoughTasty.Controllers
     [HttpGet("/vendors/new")]
     public ActionResult New() { return View(); }
 
-    [HttpGet("/vendor/{id}")]
+    [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
       Vendor vendorToShow = Vendor.Find(id);
