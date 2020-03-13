@@ -68,7 +68,7 @@ namespace DoughTasty.Models
       _allOrders.Add(order);
     }
 
-    public List<Order> AllOrders()
+    public List<Order> GetAllOrders()
     {
       return _allOrders;
     }
