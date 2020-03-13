@@ -40,5 +40,10 @@ namespace DoughTasty.Models
       }
       return null;
     }
+
+    public static bool Delete(int id)
+    {
+      return false;
+    }
   }
 }
