@@ -28,5 +28,12 @@ namespace DoughTasty.Controllers
       Vendor vendorToShow = Vendor.Find(id);
       return View(vendorToShow);
     }
+
+    [HttpPost("/vendors/{id}/delete")]
+    public ActionResult Destroy(int id)
+    {
+      Vendor.Delete(id);
+      return RedirectToAction("Index");
+    }
   }
 }
