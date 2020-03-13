@@ -10,15 +10,20 @@ namespace DoughTasty.Models
     public List<Order> Orders {get; set;}
     public int Id {get; set;}
     private static int _currentId = 0;
-    public static List<Vendor> AllVendors {get; set;}
+    private static List<Vendor> _allVendors = new List<Vendor>();
     public Vendor(string title, string description)
     {
-      //instantiate
+      _currentId++;
+      Id = _currentId;
+      Title = title;
+      Description = description;
+      _allVendors.Add(this);
     }
 
     public static void ClearAll()
     {
-      AllVendors.Clear();
+      _allVendors.Clear();
+      _currentId = 0;
     }
   }
 }
