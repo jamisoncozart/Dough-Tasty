@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+hr {
+  margin: 2rem;
+}
+
+#homeLink, #homeLink:hover, #homeLink:active {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  width: 30rem;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#homeLink p {
+  font-weight: bold;
+  font-size: 2rem;
+}
